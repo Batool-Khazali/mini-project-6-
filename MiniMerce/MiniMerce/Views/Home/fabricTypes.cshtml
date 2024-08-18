@@ -1,0 +1,38 @@
+﻿@model IEnumerable<MiniMerce.Models.fabric_types>
+
+@{
+    ViewBag.Title = "fabricTypes";
+}
+
+
+
+<main>
+
+
+    <div class="banner-section spad">
+        <div class="container-fluid">
+            <div class="row">
+
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-4">
+                        <a href="@Url.Action("typesList", "Home", new {id = item.type})" style="text-decoration: none;">
+                            <div class="single-banner categorycard">
+                                <img src="~/img/my images/pexels-pixabay-259756 (1).jpg" alt="" />
+                                <div class="inner-text">
+                                    <h4>@item.type</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+
+
+
+</main>
+
+

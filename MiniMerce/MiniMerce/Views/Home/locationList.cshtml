@@ -1,0 +1,45 @@
+﻿@model List<string>
+
+
+@{
+    ViewBag.Title = "locationList";
+}
+
+<main>
+    <div class="banner-section spad">
+        <div class="container-fluid">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    // Split the item into an array of strings
+                    string[] rowArray = item.Split(',');
+
+                    <div class="col-md-4 mb-3">
+                        <div class="card" style="margin:10px;">
+                            <img class="card-img-top" src="~/img/my images/@rowArray[1]" alt=" " style="min-height:300px;">
+                            <div class="card-body">
+                                <p>@rowArray[0]</p>
+                                <p>@rowArray[6]</p>
+                                <p>@rowArray[2] JOD per meter</p>
+                                <p>
+                                    colors:
+                                    @foreach (string c in rowArray[4].Split(';'))
+                                    {
+                                        <span class="color-circle" style="background-color: @c; border-radius: 50%; width:30px; height:30px; display:inline-block;"></span>
+                                    }
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                @using (Html.BeginForm("Details", "Home", new { id = rowArray[7].Trim() }, FormMethod.Get))
+                                {
+                                    <input type="submit" value="Details" class="btn" style="color: #283618" />
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</main>
+

@@ -1,0 +1,22 @@
+﻿.footerLogo {
+    display: block;
+    background-image: url('../img/my images/minimerce-high-resolution-logo-transparent.png') !important;
+    min-height: 50px !important;
+    min-width: 300px !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    color: transparent !important;
+    background-color : #3b3b3b;
+
+}
+
+. categorycard img {
+    object-fit: contain;
+}
+
+.categorycard img {
+    height: 320px !important;
+    width: 570px !important;
+}
+

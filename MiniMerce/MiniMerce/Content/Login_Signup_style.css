@@ -1,0 +1,258 @@
+﻿.container.body-content {
+    margin-bottom: 15px;
+}
+
+a{
+    color:black;
+}
+
+    a:hover {
+        color: #3b3b3b;
+    }
+
+main {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.Login_Signup_container {
+    position: relative;
+    max-width: 850px;
+    width: 100%;
+    background: #fff;
+    padding: 40px 30px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    perspective: 2700px;
+}
+
+    .Login_Signup_container .cover {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        width: 50%;
+        z-index: 98;
+        transition: all 1s ease;
+        transform-origin: left;
+        transform-style: preserve-3d;
+    }
+
+    .Login_Signup_container #flip:checked ~ .cover {
+        transform: rotateY(-180deg);
+    }
+
+    .Login_Signup_container .cover .front,
+    .Login_Signup_container .cover .back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        backface-visibility: hidden;
+    }
+
+.cover .back {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.Login_Signup_container .cover::before,
+.Login_Signup_container .cover::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #e7ab3c;
+    opacity: 0.5;
+    z-index: 5;
+    display: none;
+}
+
+.Login_Signup_container .cover::after {
+    opacity: 0.2;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.Login_Signup_container .cover img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 10;
+}
+
+.Login_Signup_container .cover .text {
+    position: absolute;
+    z-index: 15;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover .text .text-1,
+.cover .text .text-2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+
+.cover .text .text-2 {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.Login_Signup_container .forms {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+}
+
+.Login_Signup_container .form-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-content .login-form,
+.form-content .signup-form {
+    width: calc(100% / 2 - 25px);
+}
+
+.forms .form-content .title {
+    position: relative;
+    font-size: 24px;
+    font-weight: 500;
+    color: #3b3b3b;
+}
+
+    .forms .form-content .title:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 25px;
+        background: #e7ab3c;
+    }
+
+.forms .signup-form .title:before {
+    width: 20px;
+}
+
+.forms .form-content .input-boxes {
+    margin-top: 30px;
+}
+
+.forms .form-content .input-box {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+}
+
+.form-content .input-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+    .form-content .input-box input:focus,
+    .form-content .input-box input:valid {
+        border-color: #e7ab3c;
+    }
+
+.form-content .input-box i {
+    position: absolute;
+    color: #e7ab3c;
+    font-size: 17px;
+}
+
+.forms .form-content .text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #3b3b3b;
+}
+
+    .forms .form-content .text a {
+        text-decoration: none;
+    }
+
+        .forms .form-content .text a:hover {
+            text-decoration: underline;
+        }
+
+.forms .form-content .button {
+    color: #fff;
+    margin-top: 40px;
+}
+
+    .forms .form-content .button input {
+        color: #fff;
+        background: #e7ab3c;
+        border-radius: 6px;
+        padding: 0;
+        cursor: pointer;
+        transition: all 0.4s ease;
+    }
+
+        .forms .form-content .button input:hover {
+            background: #3b3b3b;
+        }
+
+.forms .form-content label {
+    color: #5b13b9;
+    cursor: pointer;
+}
+
+    .forms .form-content label:hover {
+        text-decoration: underline;
+    }
+
+.forms .form-content .login-text,
+.forms .form-content .sign-up-text {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.Login_Signup_container #flip {
+    display: none;
+}
+
+@media (max-width: 730px) {
+    .Login_Signup_container .cover {
+        display: none;
+    }
+
+    .form-content .login-form,
+    .form-content .signup-form {
+        width: 100%;
+    }
+
+    .form-content .signup-form {
+        display: none;
+    }
+
+    .Login_Signup_container #flip:checked ~ .forms .signup-form {
+        display: block;
+    }
+
+    .Login_Signup_container #flip:checked ~ .forms .login-form {
+        display: none;
+    }
+}

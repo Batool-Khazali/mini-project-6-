@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Cart";
+}
+
+<main>
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Your Cart</h2>
+
+            @if (ViewBag.CartItems != null && ((List<MiniMerce.Models.cart_items>)ViewBag.CartItems).Any())
+            {
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Amount</th>
+                            <th>Item Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in (List<MiniMerce.Models.cart_items>)ViewBag.CartItems)
+                        {
+                            <tr>
+                                <td>@item.product_id</td>
+                                <td>@item.amount</td>
+                                <td>@item.item_total</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+                <div class="text-end">
+                    <h4>Total: @ViewBag.Total JOD</h4>
+                </div>
+            }
+            else
+            {
+                <p>Your cart is empty.</p>
+            }
+        </div>
+    </section>
+</main>

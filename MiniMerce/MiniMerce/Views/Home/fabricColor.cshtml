@@ -1,0 +1,27 @@
+﻿@model List<string>
+@{
+    ViewBag.Title = "fabricColor";
+}
+
+<main>
+    <div class="banner-section spad">
+        <div class="container-fluid">
+            <div class="row">
+                @foreach (var color in Model)
+                {
+                    <div class="col-lg-4" style="margin-top:2em; ">
+                        <a href="@Url.Action("colorList", "Home", new { id = color })" style="text-decoration: none;">
+                            <div class="single-banner categorycard" style="background-color: @color ; min-height:15em; ">
+                                
+                                <div class="inner-text">
+                                    <h4>@color</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</main>
+

@@ -1,0 +1,224 @@
+﻿@model MiniMerce.Models.user
+
+@{
+    ViewBag.Title = "profile";
+}
+
+<main>
+
+
+
+    <div class="container emp-profile">
+
+        <div class="row">
+
+            <div class="col-md-3 userSideDash">
+                <div class="list-group userSideDashList">
+                    <a href="@Url.Action("Index", "Home")"
+                       class="list-group-item list-group-item-action sideDashItem">
+                        <img src="~/img/my images/minimerce-high-resolution-logo-transparent.png" alt="" />
+                    </a>
+                    <a href="@Url.Action("profile", "Home", new { id = Model.ID })"
+                       class="list-group-item list-group-item-action sideDashItem active" style=" background-color: #e7ab3c; border: #e7ab3c; color: black">User Profile</a>
+                    <a href="@Url.Action("editpassword", "home", new { id = Model.ID })"
+                       class="list-group-item list-group-item-action sideDashItem">Change Password</a>
+                    <a href="@Url.Action("editaddress", "home", new { id = Model.ID })"
+                       class="list-group-item list-group-item-action sideDashItem">Change Address</a>
+                    <a href="#"
+                       class="list-group-item list-group-item-action sideDashItem">Order History</a>
+                    <a href="#"
+                       class="list-group-item list-group-item-action sideDashItem">Reviews</a>
+                    <a href="#"
+                       class="list-group-item list-group-item-action sideDashItem"></a>
+                    <a href="#"
+                       class="list-group-item list-group-item-action sideDashItem"></a>
+                    <a href="#"
+                       class="list-group-item list-group-item-action sideDashItem"></a>
+                    <a href="../html/coming soon.html"
+                       class="list-group-item list-group-item-action sideDashItem"></a>
+                    <a href="#"
+                       class="list-group-item list-group-item-action sideDashItem"></a>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="card userProfileSection">
+                    <div class="container emp-profile">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="profile-img">
+                                    @if (Model.image == null)
+                                    {
+                                        <img src="~/img/my images/profile-icon-design-free-vector.jpg" alt="" />
+                                    }
+                                    else
+                                    {
+                                        <img src="~/img/my images/@Model.image" alt="" />
+                                    }
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <br />
+                                <div class="profile-head">
+                                    <h5>@Model.name</h5>
+                                    <br /><br /><br />
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active"
+                                               id="home-tab"
+                                               data-toggle="tab"
+                                               href="#home"
+                                               role="tab"
+                                               aria-controls="home"
+                                               aria-selected="true">User Information</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link"
+                                               id="profile-tab"
+                                               data-toggle="tab"
+                                               href="#profile"
+                                               role="tab"
+                                               aria-controls="profile"
+                                               aria-selected="false">؟</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+
+                                @Html.ActionLink("Edit Profile", "editProfile", new { id = Model.ID }, htmlAttributes: new { @class = "profile-edit-btn", style = "width: 7em; " })
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-8">
+                                <div class="tab-content profile-tab" id="myTabContent">
+                                    <div class="tab-pane fade show active"
+                                         id="home"
+                                         role="tabpanel"
+                                         aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>User ID</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>@Model.ID</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Name</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>@Model.name</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Email</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>@Model.email</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Phone</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>@Model.phone</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Address</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>@Model.address_country - @Model.address_city - @Model.address_street</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade"
+                                         id="profile"
+                                         role="tabpanel"
+                                         aria-labelledby="profile-tab">
+                                        @*<div class="row">
+                                                <div class="col-md-6">
+                                                    <label>؟</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p>؟</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>؟</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p>؟</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>؟</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p>؟</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>؟</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p>؟</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>؟</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p>؟</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <label>؟</label><br />
+                                                    <p>؟</p>
+                                                </div>
+                                            </div>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</main>
+
+@section stylesheet
+{
+
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="~/Content/profile_style.css" />
+
+
+}
+
+
+
+
+

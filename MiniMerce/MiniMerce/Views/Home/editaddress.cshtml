@@ -1,0 +1,131 @@
+﻿@model MiniMerce.Models.user
+
+@{
+    ViewBag.Title = "editaddress";
+}
+
+
+
+
+<main>
+
+
+    <div class="container emp-profile">
+
+        <div class="row">
+
+            <div class="col-md-3 userSideDash">
+                <div class="list-group userSideDashList">
+                    <a href="@Url.Action("Index", "Home")"
+                       class="list-group-item list-group-item-action sideDashItem">
+                        <img src="~/img/my images/minimerce-high-resolution-logo-transparent.png" alt="" />
+                    </a>
+                    <a href="@Url.Action("profile", "Home", new { id = Model.ID })"
+                       class="list-group-item list-group-item-action sideDashItem">User Profile</a>
+                    <a href="@Url.Action("editpassword", "home", new { id = Model.ID })"
+                       class="list-group-item list-group-item-action sideDashItem">Change Password</a>
+                    <a href="@Url.Action("editaddress", "home", new { id = Model.ID })"
+                       class="list-group-item list-group-item-action sideDashItem active" style=" background-color: #e7ab3c; border: #e7ab3c; color: black">Change Address</a>
+                    <a href="#"
+                       class="list-group-item list-group-item-action sideDashItem">Order History</a>
+                    <a href="#"
+                       class="list-group-item list-group-item-action sideDashItem">Reviews</a>
+                    <a href="#"
+                       class="list-group-item list-group-item-action sideDashItem"></a>
+                    <a href="#"
+                       class="list-group-item list-group-item-action sideDashItem"></a>
+                    <a href="#"
+                       class="list-group-item list-group-item-action sideDashItem"></a>
+                    <a href="../html/coming soon.html"
+                       class="list-group-item list-group-item-action sideDashItem"></a>
+                    <a href="#"
+                       class="list-group-item list-group-item-action sideDashItem"></a>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="card userProfileSection">
+                    <div class="container emp-profile">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4>Change address</h4>
+                                <hr class="profileHR">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                @using (Html.BeginForm())
+                                {
+                                    @Html.AntiForgeryToken()
+
+                                    <div class="form-horizontal">
+                                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                        @Html.HiddenFor(model => model.ID)
+
+                                        <div class="form-group">
+                                            @Html.Label("address_country", "Country", htmlAttributes: new { @class = "control-label col-md-12" })
+                                            <div class="col-md-12">
+                                                @Html.EditorFor(model => model.address_country, new { htmlAttributes = new { @class = "form-control" } })
+                                                @Html.ValidationMessageFor(model => model.address_country, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            @Html.Label("address_city", "City", htmlAttributes: new { @class = "control-label col-md-12" })
+                                            <div class="col-md-12">
+                                                @Html.EditorFor(model => model.address_city, new { htmlAttributes = new { @class = "form-control" } })
+                                                @Html.ValidationMessageFor(model => model.address_city, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            @Html.Label("address_street", "Street", htmlAttributes: new { @class = "control-label col-md-12" })
+                                            <div class="col-md-12">
+                                                @Html.EditorFor(model => model.address_street, new { htmlAttributes = new { @class = "form-control" } })
+                                                @Html.ValidationMessageFor(model => model.address_street, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <div class="col-md-offset-2 col-md-12">
+                                                <input type="submit" value="Save" class = "profile-edit-btn" style = "width: 7em; " />
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+
+                                <div>
+                                    @Html.ActionLink("Go back", "profile")
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+</main>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+@section stylesheet
+{
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="~/Content/profile_style.css" />
+
+}

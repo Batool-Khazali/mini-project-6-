@@ -1,0 +1,124 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Orange\\Desktop\\mini project 6\\code\\MiniMerce\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2CBA3E9D-EDCA-48F0-B01C-F4EC53500EB2}|MiniMerce\\MiniMerce.csproj|c:\\users\\orange\\desktop\\mini project 6\\code\\minimerce\\minimerce\\views\\home\\cartpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2CBA3E9D-EDCA-48F0-B01C-F4EC53500EB2}|MiniMerce\\MiniMerce.csproj|solutionrelative:minimerce\\views\\home\\cartpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CBA3E9D-EDCA-48F0-B01C-F4EC53500EB2}|MiniMerce\\MiniMerce.csproj|c:\\users\\orange\\desktop\\mini project 6\\code\\minimerce\\minimerce\\views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2CBA3E9D-EDCA-48F0-B01C-F4EC53500EB2}|MiniMerce\\MiniMerce.csproj|solutionrelative:minimerce\\views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CBA3E9D-EDCA-48F0-B01C-F4EC53500EB2}|MiniMerce\\MiniMerce.csproj|c:\\users\\orange\\desktop\\mini project 6\\code\\minimerce\\minimerce\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CBA3E9D-EDCA-48F0-B01C-F4EC53500EB2}|MiniMerce\\MiniMerce.csproj|solutionrelative:minimerce\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CBA3E9D-EDCA-48F0-B01C-F4EC53500EB2}|MiniMerce\\MiniMerce.csproj|c:\\users\\orange\\desktop\\mini project 6\\code\\minimerce\\minimerce\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2CBA3E9D-EDCA-48F0-B01C-F4EC53500EB2}|MiniMerce\\MiniMerce.csproj|solutionrelative:minimerce\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CBA3E9D-EDCA-48F0-B01C-F4EC53500EB2}|MiniMerce\\MiniMerce.csproj|C:\\Users\\Orange\\Desktop\\mini project 6\\code\\MiniMerce\\minimerce\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2CBA3E9D-EDCA-48F0-B01C-F4EC53500EB2}|MiniMerce\\MiniMerce.csproj|solutionrelative:minimerce\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CBA3E9D-EDCA-48F0-B01C-F4EC53500EB2}|MiniMerce\\MiniMerce.csproj|C:\\Users\\Orange\\Desktop\\mini project 6\\code\\MiniMerce\\minimerce\\content\\mystyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{2CBA3E9D-EDCA-48F0-B01C-F4EC53500EB2}|MiniMerce\\MiniMerce.csproj|solutionrelative:minimerce\\content\\mystyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\mini project 6\\code\\MiniMerce\\MiniMerce\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "MiniMerce\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\mini project 6\\code\\MiniMerce\\MiniMerce\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "MiniMerce\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAADoAAAAAAAAAAAAiwEgAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-17T16:34:35.057Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\mini project 6\\code\\MiniMerce\\MiniMerce\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "MiniMerce\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\mini project 6\\code\\MiniMerce\\MiniMerce\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "MiniMerce\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAMsBAAAAAAAAAAAcwAkCAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T18:40:30.37Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\mini project 6\\code\\MiniMerce\\MiniMerce\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "MiniMerce\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\mini project 6\\code\\MiniMerce\\MiniMerce\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "MiniMerce\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAwwBEAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-18T18:40:26.967Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "cartPage.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\mini project 6\\code\\MiniMerce\\MiniMerce\\Views\\Home\\cartPage.cshtml",
+              "RelativeDocumentMoniker": "MiniMerce\\Views\\Home\\cartPage.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\mini project 6\\code\\MiniMerce\\MiniMerce\\Views\\Home\\cartPage.cshtml",
+              "RelativeToolTip": "MiniMerce\\Views\\Home\\cartPage.cshtml",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAwwBoAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-18T20:52:49.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\mini project 6\\code\\MiniMerce\\MiniMerce\\Views\\Home\\Details.cshtml",
+              "RelativeDocumentMoniker": "MiniMerce\\Views\\Home\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\mini project 6\\code\\MiniMerce\\MiniMerce\\Views\\Home\\Details.cshtml",
+              "RelativeToolTip": "MiniMerce\\Views\\Home\\Details.cshtml",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAwwFwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-18T18:54:21.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "myStyle.css",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\mini project 6\\code\\MiniMerce\\MiniMerce\\Content\\myStyle.css",
+              "RelativeDocumentMoniker": "MiniMerce\\Content\\myStyle.css",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\mini project 6\\code\\MiniMerce\\MiniMerce\\Content\\myStyle.css",
+              "RelativeToolTip": "MiniMerce\\Content\\myStyle.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-08-17T17:43:19.183Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

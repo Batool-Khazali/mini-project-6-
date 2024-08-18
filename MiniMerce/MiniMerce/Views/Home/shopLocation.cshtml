@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MiniMerce.Models.shop>
+
+@{
+    ViewBag.Title = "shopLocation";
+
+    var groupedShops = Model.GroupBy(shop => shop.location);
+}
+
+<main>
+    <div class="banner-section spad">
+        <div class="container-fluid">
+            <div class="row">
+                @foreach (var group in groupedShops)
+                {
+                    <div class="col-lg-4">
+                        <a href="@Url.Action("locationList", "Home", new { id = group.Key })" style="text-decoration: none;">
+                            <div class="single-banner categorycard">
+                                <img src="~/img/my images//Irbid-2.jpg" alt="" />
+                                <div class="inner-text">
+                                    <h4>@group.Key</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</main>

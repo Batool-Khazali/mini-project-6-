@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <div class="banner-section spad">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-lg-4">
+                    <a href="@Url.Action("fabricTypes", "Home", new {id = "type"})" style="text-decoration: none;">
+                        <div class="single-banner categorycard">
+                            <img src="~/img/my images/mceu_5170613541679132704964.jpg" alt="" />
+                            <div class="inner-text">
+                                <h4>type</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4">
+                    <a href="@Url.Action("shopLocation", "Home", new {id = "location"})" style="text-decoration: none;">
+                        <div class="single-banner categorycard">
+                            <img src="~/img/my images/Irbid-2.jpg" alt="" />
+                            <div class="inner-text">
+                                <h4>Location</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4">
+                    <a href="@Url.Action("fabricColor", "Home", new {id = "color"})" style="text-decoration: none;">
+
+                        <div class="single-banner categorycard">
+                            <img src="~/img/my images/fabric-1435472_1280.jpg" alt="" />
+                            <div class="inner-text">
+                                <h4>Color</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>

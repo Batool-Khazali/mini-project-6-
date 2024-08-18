@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MiniMerceModelStoreContainer" CdmEntityContainer="MiniMerceEntities">
+    <EntitySetMapping Name="carts">
+      <EntityTypeMapping TypeName="MiniMerceModel.cart">
+        <MappingFragment StoreEntitySet="cart">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="total" ColumnName="total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cart_items">
+      <EntityTypeMapping TypeName="MiniMerceModel.cart_items">
+        <MappingFragment StoreEntitySet="cart_items">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="cart_id" ColumnName="cart_id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="item_total" ColumnName="item_total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="coupons">
+      <EntityTypeMapping TypeName="MiniMerceModel.coupon">
+        <MappingFragment StoreEntitySet="coupons">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="keyword" ColumnName="keyword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fabric_types">
+      <EntityTypeMapping TypeName="MiniMerceModel.fabric_types">
+        <MappingFragment StoreEntitySet="fabric_types">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orders">
+      <EntityTypeMapping TypeName="MiniMerceModel.order">
+        <MappingFragment StoreEntitySet="orders">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="cart_id" ColumnName="cart_id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="products">
+      <EntityTypeMapping TypeName="MiniMerceModel.product">
+        <MappingFragment StoreEntitySet="products">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reviews">
+      <EntityTypeMapping TypeName="MiniMerceModel.review">
+        <MappingFragment StoreEntitySet="reviews">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="rate" ColumnName="rate" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="shops">
+      <EntityTypeMapping TypeName="MiniMerceModel.shop">
+        <MappingFragment StoreEntitySet="shops">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="legal_identifiaction" ColumnName="legal_identifiaction" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stocks">
+      <EntityTypeMapping TypeName="MiniMerceModel.stock">
+        <MappingFragment StoreEntitySet="stock">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="creation_date" ColumnName="creation_date" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="shop_id" ColumnName="shop_id" />
+          <ScalarProperty Name="sale" ColumnName="sale" />
+          <ScalarProperty Name="sale_percentage" ColumnName="sale_percentage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="transactions">
+      <EntityTypeMapping TypeName="MiniMerceModel.transaction">
+        <MappingFragment StoreEntitySet="transactions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="payment_method" ColumnName="payment_method" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="shipping_method" ColumnName="shipping_method" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="MiniMerceModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="address_country" ColumnName="address_country" />
+          <ScalarProperty Name="address_city" ColumnName="address_city" />
+          <ScalarProperty Name="address_street" ColumnName="address_street" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

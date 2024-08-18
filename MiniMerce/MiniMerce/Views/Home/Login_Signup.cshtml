@@ -1,0 +1,111 @@
+﻿@model MiniMerce.Models.user
+
+@{
+    ViewBag.Title = "Login_Signup";
+}
+
+<main>
+
+    <div class="Login_Signup_container">
+        <input type="checkbox" id="flip">
+        <div class="cover">
+            <div class="front">
+                <img src="~/img/my images/عيوب-قماش-الرايون.jpg" alt="">
+                <div class="text">
+                    <span class="text-1">Happy to see you again</span>
+                    <span class="text-2">Let's continue our journey</span>
+                </div>
+            </div>
+            <div class="back">
+                <img class="backImg" src="~/img/my images/WhatsAppImage2023-12-12at12.30.59_a2481a37.jpg" alt="">
+                <div class="text">
+                    <span class="text-1">Join our family <br> with one step</span>
+                    <span class="text-2">Let's get started</span>
+                </div>
+            </div>
+        </div>
+        <div class="forms">
+            <div class="form-content">
+                <div class="login-form">
+                    <div class="title">Login</div>
+                    @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="input-boxes">
+                            <div class="input-box">
+                                <i class="fas fa-envelope"></i>
+                                <input type="text" name="email" placeholder="Enter your email" required>
+                                @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="input-box">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" name="password" placeholder="Enter your password" required>
+                                @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+
+                            </div>
+                            <div class="text">@*<a href="#">*@Forgot password?@*</a>*@</div>
+                            <div class="button input-box">
+                                <input type="submit" value="Sumbit">
+                            </div>
+                            <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
+                        </div>
+                    }
+
+                </div>
+                <div class="signup-form">
+                    <div class="title">Signup</div>
+                    @using (Html.BeginForm("signup", "Home", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+
+
+                        <div class="input-boxes">
+                            <div class="input-box">
+                                <i class="fas fa-user"></i>
+                                <input type="text" name="name" placeholder="Enter your name" required>
+                                @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                                @ViewBag.Message
+
+                            </div>
+                            <div class="input-box">
+                                <i class="fas fa-envelope"></i>
+                                <input type="text" name="email" placeholder="Enter your email" required>
+                                @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+
+                            </div>
+                            <div class="input-box">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" name="password" placeholder="Enter your password" required>
+                                @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+
+                            </div>
+                            <div class="input-box">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" class="form-control" placeholder="re-enter your password" id="confirmPwd" name="confirmPwd" />
+                                @ViewBag.Message2
+                            </div>
+                            <div class="button input-box">
+                                <input type="submit" value="Sumbit">
+                            </div>
+                            <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+                        </div>
+
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+
+@section stylesheet
+{
+
+    <link rel="stylesheet" href="~/Content/Login_Signup_style.css" />
+
+
+}

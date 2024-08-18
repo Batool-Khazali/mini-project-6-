@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MiniMerceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="cart">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="total" Type="float" />
+  </EntityType>
+  <EntityType Name="cart_items">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cart_id" Type="int" />
+    <Property Name="product_id" Type="int" />
+    <Property Name="amount" Type="float" />
+    <Property Name="item_total" Type="float" />
+  </EntityType>
+  <EntityType Name="coupons">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="amount" Type="int" />
+    <Property Name="keyword" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="fabric_types">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="orders">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cart_id" Type="int" />
+    <Property Name="status" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="products">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="image" Type="nvarchar(max)" />
+    <Property Name="price" Type="float" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="color" Type="nvarchar(max)" />
+    <Property Name="description" Type="nvarchar(max)" />
+    <Property Name="type_id" Type="int" />
+  </EntityType>
+  <EntityType Name="reviews">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="product_id" Type="int" />
+    <Property Name="rate" Type="int" />
+    <Property Name="comment" Type="nvarchar(max)" />
+    <Property Name="date" Type="date" />
+  </EntityType>
+  <EntityType Name="shops">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="location" Type="nvarchar(max)" />
+    <Property Name="owner" Type="nvarchar(max)" />
+    <Property Name="phone" Type="int" />
+    <Property Name="legal_identifiaction" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="stock">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_id" Type="int" />
+    <Property Name="creation_date" Type="date" />
+    <Property Name="amount" Type="int" />
+    <Property Name="shop_id" Type="int" />
+    <Property Name="sale" Type="int" />
+    <Property Name="sale_percentage" Type="int" />
+  </EntityType>
+  <EntityType Name="transactions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="payment_method" Type="nvarchar(max)" />
+    <Property Name="date" Type="date" />
+    <Property Name="total" Type="float" />
+    <Property Name="status" Type="nvarchar(max)" />
+    <Property Name="order_id" Type="int" />
+    <Property Name="shipping_method" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="image" Type="nvarchar(max)" />
+    <Property Name="email" Type="nvarchar(max)" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+    <Property Name="phone" Type="int" />
+    <Property Name="address_country" Type="nvarchar(max)" />
+    <Property Name="address_city" Type="nvarchar(max)" />
+    <Property Name="address_street" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="MiniMerceModelStoreContainer">
+    <EntitySet Name="cart" EntityType="Self.cart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cart_items" EntityType="Self.cart_items" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="coupons" EntityType="Self.coupons" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fabric_types" EntityType="Self.fabric_types" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="orders" EntityType="Self.orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="products" EntityType="Self.products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="reviews" EntityType="Self.reviews" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="shops" EntityType="Self.shops" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="stock" EntityType="Self.stock" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="transactions" EntityType="Self.transactions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
